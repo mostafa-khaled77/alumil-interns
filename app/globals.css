@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --color-alumil-yellow: #FFD200;
+  --color-alumil-yellow-hover: #e6bd00;
+  --color-alumil-charcoal: #1A1A1A;
+  --color-alumil-navy: #001722;
+  --color-alumil-slate: #2C3E50;
+  --color-alumil-gray-bg: #F8F9FA;
+  --color-alumil-card-bg: #FFFFFF;
+  --color-alumil-border: #E5E7EB;
+
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+}
+
+:root {
+  --background: #F8F9FA;
+  --foreground: #1A1A1A;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F8F9FA;
+  color: #1A1A1A;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: #FFD200;
+  color: #1A1A1A;
+}
+
+/* Light Corporate Glassmorphism */
+.glass-navbar {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(229, 231, 235, 0.8);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(229, 231, 235, 0.9);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.06);
+}
+
+.glass-badge {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 210, 0, 0.5);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Yellow Glow Accents for Light Mode */
+.yellow-glow-sm {
+  box-shadow: 0 4px 15px rgba(255, 210, 0, 0.35);
+}
+
+.yellow-glow-lg {
+  box-shadow: 0 8px 30px rgba(255, 210, 0, 0.45);
+}
+
+/* Clean Architectural Grid for Light Mode */
+.architectural-grid-light {
+  background-size: 36px 36px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+}
+
+/* Continuous Floating Animation */
+@keyframes continuous-float {
+  0%, 100% {
+    transform: translateY(-6px);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+.animate-float {
+  animation: continuous-float 5s ease-in-out infinite;
+}
